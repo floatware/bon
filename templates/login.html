@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <form action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="rj2hy1QPU4T48BztPMIvG/YqdxgFsxRz1StL7cuIFMlMz+E+O8AP93XsXLI4bqPPMxfM8biLqCjnJF0wHoIqUw==">
+Log In
+
+<input type="email" placeholder="Email Address" label="false" spellcheck="false" value="" name="email" id="user_email">
+<input placeholder="Password" label="false" autocomplete="off" type="password" name="password" id="user_password">
+<input type="submit" name="commit" value="Log In">
+<p><a href="/forgot_password/new">Forgot password?</a></p>
+</form>
+{% endblock %}
