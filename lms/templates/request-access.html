@@ -7,8 +7,10 @@ var request = $.ajax({
 			url: 'https://github.com/login/oauth/authorize',
 			type: 'GET',
 			client_id: 'a3c098d044f80f50a0ac',
+			redirect_uri: 'http://sidsingh.net/dashboard',
+			state: '1wdv&U!KMAWRG34g323f2g4576gertb4',
 			done: function(result){
-				alert(result);			
+				alert(result);
 			},
 			fail: function(jqXHR, textStatus){
 				alert("request failed");

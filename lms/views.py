@@ -1,4 +1,4 @@
-from flask import render_template, session, redirect, url_for, request, flash, g, jsonify, abort
+from flask import render_template, request, jsonify
 
 from lms import app
 
@@ -16,8 +16,12 @@ def login():
     return render_template('login.html')
 
 @app.route('/bon')
-def request():
+def upload_gh():
   return render_template('request-access.html')
+
+@app.route('/dashboard')
+def dash():
+  return render_template('dashboard.html')
 
 
 
