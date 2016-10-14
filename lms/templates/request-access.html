@@ -1,1 +1,19 @@
-<a href="https://github.com/login/oauth/authorize" method="GET">Request Access </a>
+<button id="gh-access">Request Access</button>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script>
+var request = $.ajax({
+			url: 'https://github.com/login/oauth/authorize',
+			type: 'GET',
+			client_id: 'a3c098d044f80f50a0ac',
+			done: function(result){
+				alert(result);			
+			},
+			fail: function(jqXHR, textStatus){
+				alert("request failed");
+			}
+		});
+
+$("#gh-access").click(request);
+</script>
